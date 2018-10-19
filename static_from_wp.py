@@ -19,7 +19,6 @@ class static_from_wp:
 
     
     def __get_posts(self, url):
-        print(url)
         with urllib.request.urlopen(url) as url:
             posts = json.loads(url.read().decode())
 
@@ -114,5 +113,6 @@ class static_from_wp:
         html_output = self.__generate_html()
         self.__write_file(html_output)
         
-        print(html_output)
+        print(" *  *  *  *  *  *  *  *  *  *  *  *  *")
+        print ("Static files correctly deployed! :-D")
 
