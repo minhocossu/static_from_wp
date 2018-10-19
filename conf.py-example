@@ -1,0 +1,5 @@
+site_title = "Your static site name"
+wp_url = "http://localhost"
+wp_port = "8001"
+header_title = "Some title"
+header_text = """Some big text with <strong>HTML</strong> supported."""
