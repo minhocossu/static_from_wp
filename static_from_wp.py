@@ -87,11 +87,12 @@ class static_from_wp:
     <body>
         <div class="container-fluid">
             <div class="card">
-                <h5 class="card-header">""" + conf.header_title + """
-                </h5>
+                <h2 class="card-header">""" + conf.header_title + """
+                </h2>
                 <div class="card-body">""" + conf.header_text + """
                 </div>
             </div>
+            <br/>
         """
 
     def __get_footer(self):
