@@ -21,7 +21,7 @@ class static_from_wp:
     
     def __get_posts(self, url):
         with urllib.request.urlopen(url) as url:
-            posts = json.loads(url.read().decode('utf8'))
+            posts = json.loads(url.read().decode("utf8"))
 
         return posts
 
@@ -70,7 +70,7 @@ class static_from_wp:
 
             html_output += "</div>"
     
-        return html_output.encode('utf-8')
+        return html_output
 
     def __get_header(self):
         return """
@@ -112,7 +112,7 @@ class static_from_wp:
     def __write_file(self, content):
         filename = "static/index.html"
         fo = open(filename, "wb+")
-        fo.write(content.encode('utf8'))
+        fo.write(content.encode("utf8"))
         fo.close()
     
     def run(self):
