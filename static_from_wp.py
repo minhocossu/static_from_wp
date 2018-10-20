@@ -3,6 +3,7 @@ import shutil
 import errno
 import conf
 import os
+import re
 
 class static_from_wp:
 
@@ -41,7 +42,9 @@ class static_from_wp:
         content = post.get('content').get('rendered')
         content = content.replace(':' + self.wp_port, '')
         content = content.replace('wp-content/uploads/', 'images/')
-    
+        content = content.replace('wp-image', 'images/')
+        content = re.sub("(wp-image-{\d1,2})", "", content)
+        
         post_output = """
             <div class="card">
                 <div class="card-body">
