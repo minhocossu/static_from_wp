@@ -34,6 +34,9 @@ class static_from_wp:
         except OSError as e:
             if e.errno == errno.ENOTDIR:
                 shutil.copy(wp_dir, static_dir)
+            elif e.errno == errno.EEXIST:
+                shutil.rmtree(static_dir)
+                shutil.copytree(wp_dir, static_dir)
             else:
                 print('Directory not copied. Error: %s' % e)
 
