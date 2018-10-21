@@ -87,7 +87,7 @@ class static_from_wp:
     <body>
         <div class="container-fluid">
             <div class="card">
-                <h2 class="card-header">""" + conf.header_title + """
+                <h2 class="card-header bg-gradient-info text-white">""" + conf.header_title + """
                 </h2>
                 <div class="card-body">""" + conf.header_text + """
                 </div>
