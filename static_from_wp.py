@@ -83,13 +83,17 @@ class static_from_wp:
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>""" + conf.site_title + """</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/common.css" rel="stylesheet">
     </head>
     <body>
         <div class="container-fluid">
             <div class="card">
-                <h2 class="card-header bg-gradient-info text-white">""" + conf.header_title + """
-                </h2>
-                <div class="card-body">""" + conf.header_text + """
+                <h2 class="card-header bg-info text-white">""" + conf.header_title + """</h2>
+                <div class="card-body bg-info text-white">
+                    <div class="row">
+                        <div class="logo col-md-6 col-sm-12"></div>
+                        <div class="text-header col-md-5 col-sm-12">""" + conf.header_text + """</div>
+                    </div>
                 </div>
             </div>
             <br/>

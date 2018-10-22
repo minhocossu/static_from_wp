@@ -1,0 +1,11 @@
+.logo {
+    background: url(/img/logo.png) 0% 50% no-repeat;
+    background-size: 20em;
+    display: inline-block;
+    float: left;
+    letter-spacing: 0;
+    margin-left: .5em;
+    padding: 2.8em 2.8em;
+}
+
+
