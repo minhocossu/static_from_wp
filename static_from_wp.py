@@ -90,9 +90,9 @@ class static_from_wp:
             <div class="card">
                 <h2 class="card-header bg-info text-white">""" + conf.header_title + """</h2>
                 <div class="card-body bg-info text-white">
-                    <div class="row">
-                        <div class="logo col-lg-6 col-md-12 col-sm-12"></div>
-                        <div class="text-header col-lg-4 col-md-12 col-sm-12">""" + conf.header_text + """</div>
+                    <div class="row justify-content-arround">
+                        <div class="logo col-xl-5 col-lg-6 col-md-12 col-sm-12"></div>
+                        <div class="text-header col-xl-5 col-lg-5 col-md-12 col-sm-12">""" + conf.header_text + """</div>
                     </div>
                 </div>
             </div>
