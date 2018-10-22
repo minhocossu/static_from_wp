@@ -91,8 +91,8 @@ class static_from_wp:
                 <h2 class="card-header bg-info text-white">""" + conf.header_title + """</h2>
                 <div class="card-body bg-info text-white">
                     <div class="row">
-                        <div class="logo col-md-6 col-sm-12"></div>
-                        <div class="text-header col-md-5 col-sm-12">""" + conf.header_text + """</div>
+                        <div class="logo col-lg-6 col-md-12 col-sm-12"></div>
+                        <div class="text-header col-lg-4 col-md-12 col-sm-12">""" + conf.header_text + """</div>
                     </div>
                 </div>
             </div>
