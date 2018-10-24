@@ -7,7 +7,7 @@ services:
        - ./wp/db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: wp
+       MYSQL_ROOT_PASSWORD: yourpassword
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: yourpassword
@@ -19,12 +19,14 @@ services:
      volumes:
        - ./wp/wp_content:/var/www/html/wp-content
      ports:
-       - "8001:80"
+       - "8080:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: yourpassword
+     links:
+       - db
    html:
      image: nginx:latest
      volumes:
@@ -34,7 +36,12 @@ services:
      ports:
        - "80:80"
      command: /bin/sh -c "envsubst < /etc/nginx/conf.d/static-site.conf > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
-       
+   formulario:
+     build: ./form
+     ports:
+       - "8081:80"
+     volumes:
+       - ./form/data:/data/form/data       
 volumes:
     db_data:
     wp_content:
