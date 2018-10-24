@@ -80,23 +80,25 @@ class static_from_wp:
         <meta charset="utf-8">
 	    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <title>""" + conf.site_title + """</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/common.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="card">
-                <h2 class="card-header bg-info text-white">""" + conf.header_title + """</h2>
-                <div class="card-body bg-info text-white">
-                    <div class="row justify-content-arround">
-                        <div class="logo col-xl-5 col-lg-6 col-md-12 col-sm-12"></div>
-                        <div class="text-header col-xl-5 col-lg-5 col-md-12 col-sm-12">""" + conf.header_text + """</div>
-                    </div>
-                </div>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand logo col-xl-5 col-lg-6 col-md-12 col-sm-12" href="#"></a>
+                <a class="nav-item nav-link" style="margin-left: auto;" href="#">Sobre</a>
+                <button type="submit" class="btn btn-outline-info my-2 my-sm-0">Denuncie</button>
             </div>
-            <br/>
+        </nav>
+        <div class="container">
+            <div class="alert alert-info">
+                <h2>""" + conf.header_title + """</h2>
+                <p""" + conf.header_text + """</p>
+            </div>
+            <hr/>
         """
 
     def __get_footer(self):
